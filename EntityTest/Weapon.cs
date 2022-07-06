@@ -4,7 +4,7 @@
     {
         public int Damage { get; protected set; }
         public int CoolDown { get; protected set; }
-        public Weapon(int id, int damage, int coolDown, string name) : base(id, name)
+        public Weapon(int damage, int coolDown, string name) : base(name)
         {
             Damage = damage;
             CoolDown = coolDown;

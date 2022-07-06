@@ -4,7 +4,7 @@
     {
         public int AmmoCount { get; protected set; }
         public int FireRange { get; protected set; }
-        public RangeWeapon(int id, int damage, int ammoCount, int coolDown, int fireRange, string name) : base(id, damage, coolDown, name)
+        public RangeWeapon(int damage, int ammoCount, int coolDown, int fireRange, string name) : base(damage, coolDown, name)
         {
             AmmoCount = ammoCount;
             FireRange = fireRange;
@@ -17,7 +17,7 @@
 
         string IInfoble.Get()
         {
-            return $"{Id} : {Name} : {AmmoCount} : {Damage} ";
+            return $"{Id} : {Name}";
         }
     }
 }

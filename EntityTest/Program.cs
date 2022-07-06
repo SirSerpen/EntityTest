@@ -13,13 +13,24 @@ class Program
         "Remove an item",
         "Exit"
     };
+    public static readonly string[] AddMenuItem =
+    {
+        "Weapon",
+        "Food"
+    };
+    public static readonly string[] AddMenuWeapon =
+    {
+        "Melee",
+        "Range"
+    };
     public static void Main(string[] args)
     {
         inventory = new Inventory(10);
-        var ak47 = new RangeWeapon(0, 2, 1, 2, 1, "Ak-47");
-        var apple = new Food(1, 2, "Apple");
-        inventory.Add(ak47);
+        var ak47 = new RangeWeapon(2, 1, 2, 1, "Ak-47");
+        var apple = new Food(2, "Apple");
+        inventory.Add(new Food(300, "Tea"));
         inventory.Add(apple);
+        inventory.Add(ak47);
         while (MainMenu()) { }
     }
     private static bool MainMenu()
@@ -31,26 +42,25 @@ class Program
         }
         Console.Write("\r\nSelect an option: ");
 
-        
+
         switch (Console.ReadLine())
         {
             case "1":
                 ListAllItem();
                 return true;
             case "2":
-                //SortById();
+                inventory.SortById();
                 return true;
             case "3":
-                // SortByType();
-                return true;
+                throw new NotImplementedException();
             case "4":
-                // SortByName();
+                inventory.SortByName();
                 return true;
             case "5":
-                //  AddNewItem();
+                AddNewItem();
                 return true;
             case "6":
-                // RemoveItem();
+                inventory.Remove(Convert.ToInt32(Console.ReadLine()));
                 return true;
             case "7":
                 return false;
@@ -67,6 +77,87 @@ class Program
             if (info != null) Console.WriteLine(info.Get());
         }
         Console.Write("\r\nPress Enter to return to Main Menu");
-        Console.ReadLine();
+        Console.Read();
+    }
+    private static void AddNewItem()
+    {
+        Console.Clear();
+        Console.WriteLine("Select item type:");
+        for (int i = 0; i < AddMenuItem.Length; i++)
+        {
+            Console.WriteLine($"{i + 1}) {AddMenuItem[i]}");
+        }
+        switch (Console.ReadLine())
+        {
+            case "1":
+                MenuWeapon();
+                break;
+            case "2":
+                MenuFood();
+                break;
+            default: throw new NotImplementedException();
+        }
+    }
+    private static void MenuWeapon()
+    {
+        Console.Clear();
+        Console.WriteLine("Select weapon type:");
+        for (int i = 0; i < AddMenuWeapon.Length; i++)
+        {
+            Console.WriteLine($"{i + 1}) {AddMenuWeapon[i]}");
+        }
+        switch (Console.ReadLine())
+        {
+            case "1":
+                MenuWeaponMelee();
+                break;
+            case "2":
+                MenuWeaponRange();
+                break;
+            default: throw new NotImplementedException();
+        }
+    }
+
+    private static void MenuFood()
+    {
+        Console.Clear();
+        Console.WriteLine("\r\nSelect an option: ");
+        Console.Write($"Enter CalorieAmmount : ");
+        var calorieAmmount = Convert.ToInt32(Console.ReadLine());
+        Console.Write($"Enter Name : ");
+        var name = Console.ReadLine();
+        var item = new Food(calorieAmmount, name);
+        inventory.Add(item);
+    }
+    private static void MenuWeaponRange()
+    {
+        Console.Clear();
+        Console.WriteLine("\r\nSelect an option: ");
+        Console.Write($"Enter Damage : ");
+        var damage = Convert.ToInt32(Console.ReadLine());
+        Console.Write($"Enter AmmoCount : ");
+        var ammoCount = Convert.ToInt32(Console.ReadLine());
+        Console.Write($"Enter CoolDown : ");
+        var coolDown = Convert.ToInt32(Console.ReadLine());
+        Console.Write($"Enter FireRange : ");
+        var fireRange = Convert.ToInt32(Console.ReadLine());
+        Console.Write($"Enter Name : ");
+        var name = Console.ReadLine();
+        var item = new RangeWeapon(damage, ammoCount, coolDown, fireRange, name);
+        inventory.Add(item); ;
+    }
+
+    private static void MenuWeaponMelee()
+    {
+        Console.Clear();
+        Console.WriteLine("\r\nSelect an option: ");
+        Console.Write($"Enter Damage : ");
+        var damage = Convert.ToInt32(Console.ReadLine());
+        Console.Write($"Enter CoolDown : ");
+        var coolDown = Convert.ToInt32(Console.ReadLine());
+        Console.Write($"Enter Name : ");
+        var name = Console.ReadLine();
+        var item = new MeleeWeapon(damage, coolDown, name);
+        inventory.Add(item);
     }
 }
