@@ -1,0 +1,15 @@
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\EntityTest.csproj.AssemblyReference.cache
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\EntityTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\EntityTest.AssemblyInfoInputs.cache
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\EntityTest.AssemblyInfo.cs
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\EntityTest.csproj.CoreCompileInputs.cache
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\bin\Debug\net6.0\EntityTest.exe
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\bin\Debug\net6.0\EntityTest.deps.json
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\bin\Debug\net6.0\EntityTest.runtimeconfig.json
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\bin\Debug\net6.0\EntityTest.dll
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\bin\Debug\net6.0\EntityTest.pdb
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\EntityTest.dll
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\refint\EntityTest.dll
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\EntityTest.pdb
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\EntityTest.genruntimeconfig.cache
+C:\Users\mag_o\OneDrive\Рабочий стол\exercitii\entityExercitiu\EntityTest\EntityTest\obj\Debug\net6.0\ref\EntityTest.dll
